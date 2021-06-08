@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Created by" content="El-CasT">
+    <title>Libery City</title>
+    <style>
+        body {
+            background-color: #000000;
+        }
+        
+        #animation_container,
+        #_preload_div_ {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    </style>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation, _0x56ea = ["canvas", "getElementById", "animation_container", "dom_overlay_container", "1E53E92D8A41234AACEDD70C4CD03DD8", "getComposition", "getLibrary", "fileload", "addEventListener", "complete", "manifest", "properties", "loadManifest", "getImages", "type", "item", "image", "id", "result", "getSpriteSheet", "target", "ssMetadata", "length", "name", "getResult", "frames", "_preload_div_", "display", "style", "none", "block", "addChild", "fps", "setFPS", "Ticker", "tick", "resize", "width", "height", "innerWidth", "innerHeight", "devicePixelRatio", "min", "max", "px", "scaleX", "scaleY", "tickOnUpdate", "update", "both", "compositionLoaded"];
+
+        function init() {
+            canvas = document[_0x56ea[1]](_0x56ea[0]), anim_container = document[_0x56ea[1]](_0x56ea[2]), dom_overlay_container = document[_0x56ea[1]](_0x56ea[3]);
+            var a = AdobeAn[_0x56ea[5]](_0x56ea[4]),
+                e = a[_0x56ea[6]](),
+                _ = new createjs.LoadQueue(!1);
+            _[_0x56ea[8]](_0x56ea[7], function(e) {
+                handleFileLoad(e, a)
+            }), _[_0x56ea[8]](_0x56ea[9], function(e) {
+                handleComplete(e, a)
+            });
+            e = a[_0x56ea[6]]();
+            _[_0x56ea[12]](e[_0x56ea[11]][_0x56ea[10]])
+        }
+
+        function handleFileLoad(e, a) {
+            var _ = a[_0x56ea[13]]();
+            e && e[_0x56ea[15]][_0x56ea[14]] == _0x56ea[16] && (_[e[_0x56ea[15]][_0x56ea[17]]] = e[_0x56ea[18]])
+        }
+
+        function handleComplete(e, a) {
+            var g = a[_0x56ea[6]](),
+                _ = a[_0x56ea[19]](),
+                x = e[_0x56ea[20]],
+                t = g[_0x56ea[21]];
+            for (i = 0; i < t[_0x56ea[22]]; i++) _[t[i][_0x56ea[23]]] = new createjs.SpriteSheet({
+                images: [x[_0x56ea[24]](t[i][_0x56ea[23]])],
+                frames: t[i][_0x56ea[25]]
+            });
+            var p = document[_0x56ea[1]](_0x56ea[26]);
+            p[_0x56ea[28]][_0x56ea[27]] = _0x56ea[29], canvas[_0x56ea[28]][_0x56ea[27]] = _0x56ea[30], exportRoot = new g.CoreRPLoaderv2, stage = new g.Stage(canvas), fnStartAnimation = function() {
+                    stage[_0x56ea[31]](exportRoot), createjs[_0x56ea[34]][_0x56ea[33]](g[_0x56ea[11]][_0x56ea[32]]), createjs[_0x56ea[34]][_0x56ea[8]](_0x56ea[35], stage)
+                },
+                function(r, c, d, s) {
+                    var m, l, v = 1;
+
+                    function e() {
+                        var e = g[_0x56ea[11]][_0x56ea[37]],
+                            a = g[_0x56ea[11]][_0x56ea[38]],
+                            _ = window[_0x56ea[39]],
+                            x = window[_0x56ea[40]],
+                            t = window[_0x56ea[41]] || 1,
+                            n = _ / e,
+                            i = x / a,
+                            o = 1;
+                        r && (c == _0x56ea[37] && m == _ || c == _0x56ea[38] && l == x ? o = v : d ? 1 == s ? o = Math[_0x56ea[42]](n, i) : 2 == s && (o = Math[_0x56ea[43]](n, i)) : (_ < e || x < a) && (o = Math[_0x56ea[42]](n, i))), canvas[_0x56ea[37]] = e * t * o, canvas[_0x56ea[38]] = a * t * o, canvas[_0x56ea[28]][_0x56ea[37]] = anim_container[_0x56ea[28]][_0x56ea[37]] = dom_overlay_container[_0x56ea[28]][_0x56ea[37]] = p[_0x56ea[28]][_0x56ea[37]] = e * o + _0x56ea[44], canvas[_0x56ea[28]][_0x56ea[38]] = anim_container[_0x56ea[28]][_0x56ea[38]] = dom_overlay_container[_0x56ea[28]][_0x56ea[38]] = p[_0x56ea[28]][_0x56ea[38]] = a * o + _0x56ea[44], stage[_0x56ea[45]] = t * o, stage[_0x56ea[46]] = t * o, m = _, l = x, v = o, stage[_0x56ea[47]] = !1, stage[_0x56ea[48]](), stage[_0x56ea[47]] = !0
+                    }
+                    window[_0x56ea[8]](_0x56ea[36], e), e()
+                }(!0, _0x56ea[49], !0, 1), AdobeAn[_0x56ea[50]](g[_0x56ea[11]][_0x56ea[17]]), fnStartAnimation()
+        }
+    </script>
+</head>
+
+<body onkeypress="myFunction(event)" onload="init();" style="margin:0px;">
+    <div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:1920px; height:1080px">
+        <canvas id="canvas" width="1920" height="1080" style="position: absolute; display: none; background-color:rgba(0, 0, 0, 1.00);"></canvas>
+        <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1920px; height:1080px; position: absolute; left: 0px; top: 0px; display: none;">
+        </div>
+    </div>
+    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:1080px; width: 1920px; text-align: center;'> <span style='display: inline-block; height: 100%; vertical-align: middle;'></span> <img src=images/_preloader.gif style='vertical-align: middle; max-height: 100%' /></div>
+    <audio id="toggle-mute" src="sound/intro.ogg" autoplay loop></audio>
+    <script>
+        var vid = document.getElementById("toggle-mute");
+        vid.volume = 0.03;
+    </script>
+    <script>
+        var _0x11ea = ["event", "keyCode", "which", "toLowerCase", "fromCharCode", "p", "toggle-mute", "getElementById", "muted"];
+
+        function myFunction(e) {
+            var a;
+            if (window[_0x11ea[0]] ? a = e[_0x11ea[1]] : e[_0x11ea[2]] && (a = e[_0x11ea[2]]), String[_0x11ea[4]](a)[_0x11ea[3]]() === _0x11ea[5]) {
+                var x = document[_0x11ea[7]](_0x11ea[6]);
+                x[_0x11ea[8]] = !x[_0x11ea[8]]
+            }
+        }
+    </script>
+</body>
+
+</html>
